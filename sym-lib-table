@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name bus_m.2_socket_b)(type Legacy)(uri ${KIPRJMOD}/custom_symbols/bus_m.2_socket_b.lib)(options "")(descr ""))
+)

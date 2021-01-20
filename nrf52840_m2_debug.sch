@@ -1,0 +1,1116 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "nrf52840_m.2 debug"
+Date "2020-12-14"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR01
+U 1 1 5FD3A099
+P 4400 4550
+F 0 "#PWR01" H 4400 4300 50  0001 C CNN
+F 1 "GND" H 4405 4377 50  0000 C CNN
+F 2 "" H 4400 4550 50  0001 C CNN
+F 3 "" H 4400 4550 50  0001 C CNN
+	1    4400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5FD3BD25
+P 10700 1200
+F 0 "SW1" H 10700 1485 50  0000 C CNN
+F 1 "BTN1" H 10700 1394 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 10700 1400 50  0001 C CNN
+F 3 "~" H 10700 1400 50  0001 C CNN
+F 4 "C285463" H 10700 1200 50  0001 C CNN "LCSC"
+F 5 "PTS645SH43SMTR92LFS" H 10700 1200 50  0001 C CNN "MFG P/N"
+	1    10700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FD3DB02
+P 8800 1200
+F 0 "D1" H 8793 945 50  0000 C CNN
+F 1 "LED1" H 8793 1036 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8800 1200 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1810231814_Lite-On-LTST-C190KFKT_C157740.pdf" H 8800 1200 50  0001 C CNN
+F 4 "LTST-C190KFKT" H 8800 1200 50  0001 C CNN "MFG P/N"
+F 5 "C157740" H 8800 1200 50  0001 C CNN "LCSC"
+	1    8800 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 4500 4400 4550
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5FD43D99
+P 8150 4350
+F 0 "J2" H 8200 4667 50  0000 C CNN
+F 1 "Jlink-Tag connect" H 8200 4576 50  0000 C CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 8150 4350 50  0001 C CNN
+F 3 "" H 8150 4350 50  0001 C CNN
+F 4 "DNP" H 8150 4350 50  0001 C CNN "DNP"
+	1    8150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FD46FC2
+P 7900 4450
+F 0 "#PWR02" H 7900 4200 50  0001 C CNN
+F 1 "GND" H 7905 4277 50  0000 C CNN
+F 2 "" H 7900 4450 50  0001 C CNN
+F 3 "" H 7900 4450 50  0001 C CNN
+	1    7900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4250 7950 4250
+Wire Wire Line
+	7900 4350 7950 4350
+Wire Wire Line
+	7900 4450 7950 4450
+Wire Wire Line
+	8500 4450 8450 4450
+Wire Wire Line
+	8500 4350 8450 4350
+Wire Wire Line
+	8500 4250 8450 4250
+$Sheet
+S 550  600  800  400 
+U 5FD4A77A
+F0 "connector" 50
+F1 "connector.sch" 50
+$EndSheet
+Wire Wire Line
+	3350 2200 3400 2200
+Wire Wire Line
+	3350 2300 3400 2300
+Wire Wire Line
+	4400 650  4400 700 
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5FD58CD3
+P 9650 6350
+F 0 "H1" H 9750 6396 50  0000 L CNN
+F 1 "MountingHole" H 9750 6305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 9650 6350 50  0001 C CNN
+F 3 "" H 9650 6350 50  0001 C CNN
+F 4 "DNP" H 9650 6350 50  0001 C CNN "DNP"
+	1    9650 6350
+	1    0    0    -1  
+$EndComp
+Text GLabel 3350 900  0    50   Input ~ 0
+gpio_0
+Text GLabel 3350 1000 0    50   Input ~ 0
+gpio_1
+Text GLabel 3350 1100 0    50   Input ~ 0
+gpio_2
+Wire Wire Line
+	3350 900  3400 900 
+Wire Wire Line
+	3350 1000 3400 1000
+Wire Wire Line
+	3350 1100 3400 1100
+Text GLabel 3350 1500 0    50   Input ~ 0
+gpio_3
+Text GLabel 3350 1600 0    50   Input ~ 0
+gpio_4
+Text GLabel 2600 1700 0    50   Input ~ 0
+gpio_5_NFC2
+Text GLabel 2600 1800 0    50   Input ~ 0
+gpio_6_NFC1
+Text GLabel 3350 1900 0    50   Input ~ 0
+gpio_7
+Wire Wire Line
+	3350 2800 3400 2800
+Wire Wire Line
+	3350 1500 3400 1500
+Wire Wire Line
+	3350 1600 3400 1600
+Wire Wire Line
+	3350 1900 3400 1900
+Wire Wire Line
+	5400 900  5450 900 
+Text GLabel 3350 3500 0    50   Input ~ 0
+gpio_9
+Text GLabel 3350 3200 0    50   Input ~ 0
+gpio_8_SWO
+Wire Wire Line
+	3350 3000 3400 3000
+Wire Wire Line
+	3350 3100 3400 3100
+Wire Wire Line
+	3350 3300 3400 3300
+Wire Wire Line
+	3400 3200 3350 3200
+Text GLabel 3350 4000 0    50   Input ~ 0
+gpio_10
+Text GLabel 3350 4100 0    50   Input ~ 0
+gpio_11
+Wire Wire Line
+	3350 3500 3400 3500
+Wire Wire Line
+	3350 4000 3400 4000
+Wire Wire Line
+	3350 4100 3400 4100
+Text GLabel 5450 2200 2    50   Input ~ 0
+gpio_13
+Text GLabel 5450 2100 2    50   Input ~ 0
+gpio_12
+Text GLabel 5450 2400 2    50   Input ~ 0
+gpio_15
+Text GLabel 5450 2300 2    50   Input ~ 0
+gpio_14
+Text GLabel 5450 2500 2    50   Input ~ 0
+gpio_16
+Text GLabel 5450 2800 2    50   Input ~ 0
+gpio_18
+Text GLabel 5450 2700 2    50   Input ~ 0
+gpio_17
+Text GLabel 5450 2900 2    50   Input ~ 0
+gpio_19
+Text GLabel 5450 3100 2    50   Input ~ 0
+gpio_20
+$Comp
+L bus_m.2_socket_b:Bus_M.2_Socket_B J1
+U 1 1 5FD86960
+P 4400 2600
+F 0 "J1" H 4800 4550 50  0000 C CNN
+F 1 "Bus_M.2_Socket_B" H 4850 4450 50  0000 C CNN
+F 2 "custom_footprints:te_connectivity_121991190" H 4400 3650 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2199119&DocType=Customer+Drawing&DocLang=English&PartCntxt=1-2199119-0&DocFormat=pdf" H 4400 3650 50  0001 C CNN
+F 4 "571-1-2199119-0 " H 4400 2600 50  0001 C CNN "Mouser"
+F 5 "2199119" H 4400 2600 50  0001 C CNN "MFG P/N"
+	1    4400 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 6600 4100 2    50   Input ~ 0
+gpio_22
+Text GLabel 5800 4000 2    50   Input ~ 0
+gpio_21
+Text GLabel 5450 4300 2    50   Input ~ 0
+gpio_24
+Text GLabel 6600 4200 2    50   Input ~ 0
+gpio_23
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 5FD94C23
+P 5600 4000
+F 0 "JP3" H 5600 4205 50  0000 C CNN
+F 1 "LED_R" H 5600 4114 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5600 4000 50  0001 C CNN
+F 3 "~" H 5600 4000 50  0001 C CNN
+F 4 "DNP" H 5600 4000 50  0001 C CNN "DNP"
+	1    5600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 5FD9960A
+P 6400 4100
+F 0 "JP4" H 6400 4305 50  0000 C CNN
+F 1 "LED_G" H 6400 4214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6400 4100 50  0001 C CNN
+F 3 "~" H 6400 4100 50  0001 C CNN
+F 4 "DNP" H 6400 4100 50  0001 C CNN "DNP"
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP5
+U 1 1 5FD9CB1B
+P 6400 4200
+F 0 "JP5" H 6400 4000 50  0000 C CNN
+F 1 "LED_B" H 6400 4100 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6400 4200 50  0001 C CNN
+F 3 "~" H 6400 4200 50  0001 C CNN
+F 4 "DNP" H 6400 4200 50  0001 C CNN "DNP"
+	1    6400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4000 5450 4000
+Wire Wire Line
+	5750 4000 5800 4000
+Wire Wire Line
+	5400 4100 6250 4100
+Wire Wire Line
+	6550 4100 6600 4100
+Wire Wire Line
+	6600 4200 6550 4200
+Wire Wire Line
+	6250 4200 5400 4200
+Wire Wire Line
+	5400 4300 5450 4300
+Wire Wire Line
+	5400 3100 5450 3100
+Wire Wire Line
+	5400 2900 5450 2900
+Wire Wire Line
+	5400 2800 5450 2800
+Wire Wire Line
+	5400 2700 5450 2700
+Wire Wire Line
+	5400 2500 5450 2500
+Wire Wire Line
+	5400 2400 5450 2400
+Wire Wire Line
+	5400 2300 5450 2300
+Wire Wire Line
+	5400 2200 5450 2200
+Wire Wire Line
+	5400 2100 5450 2100
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5FDB1ED2
+P 2800 1700
+F 0 "JP1" H 2800 1905 50  0000 C CNN
+F 1 "NFC2" H 2800 1814 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2800 1700 50  0001 C CNN
+F 3 "~" H 2800 1700 50  0001 C CNN
+F 4 "DNP" H 2800 1700 50  0001 C CNN "DNP"
+	1    2800 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 5FDB23D7
+P 2800 1800
+F 0 "JP2" H 2800 1600 50  0000 C CNN
+F 1 "NFC1" H 2800 1700 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2800 1800 50  0001 C CNN
+F 3 "~" H 2800 1800 50  0001 C CNN
+F 4 "DNP" H 2800 1800 50  0001 C CNN "DNP"
+	1    2800 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1700 2650 1700
+Wire Wire Line
+	2600 1800 2650 1800
+Wire Wire Line
+	2950 1700 3400 1700
+Wire Wire Line
+	2950 1800 3400 1800
+$Comp
+L Device:R_Small R1
+U 1 1 5FDC0AA2
+P 8500 1200
+F 0 "R1" V 8304 1200 50  0000 C CNN
+F 1 "1k" V 8395 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8500 1200 50  0001 C CNN
+F 3 "~" H 8500 1200 50  0001 C CNN
+F 4 "C14676" H 8500 1200 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-071KL" H 8500 1200 50  0001 C CNN "MFG P/N"
+	1    8500 1200
+	0    1    1    0   
+$EndComp
+Text Notes 7550 650  0    50   ~ 0
+LED Matrix
+Text Notes 9250 650  0    50   ~ 0
+Button Matrix
+$Comp
+L power:GND #PWR03
+U 1 1 5FDD5813
+P 9000 1200
+F 0 "#PWR03" H 9000 950 50  0001 C CNN
+F 1 "GND" H 9005 1027 50  0000 C CNN
+F 2 "" H 9000 1200 50  0001 C CNN
+F 3 "" H 9000 1200 50  0001 C CNN
+	1    9000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1200 8950 1200
+Wire Wire Line
+	8650 1200 8600 1200
+Wire Wire Line
+	10950 1200 10900 1200
+$Comp
+L Device:R_Small R5
+U 1 1 5FDDC3A6
+P 10100 1050
+F 0 "R5" H 10159 1096 50  0000 L CNN
+F 1 "100k" H 10159 1005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 1050 50  0001 C CNN
+F 3 "~" H 10100 1050 50  0001 C CNN
+F 4 "C100048" H 10100 1050 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-07100KL" H 10100 1050 50  0001 C CNN "MFG P/N"
+	1    10100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5FDDCF20
+P 10100 1350
+F 0 "C1" H 10192 1396 50  0000 L CNN
+F 1 "0.1uF" H 10192 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 1350 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Huaxin-S-T-0603F104Z500_C83060.pdf" H 10100 1350 50  0001 C CNN
+F 4 "C83060" H 10100 1350 50  0001 C CNN "LCSC"
+F 5 "063F104Z500CT" H 10100 1350 50  0001 C CNN "MFG P/N"
+	1    10100 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1150 10100 1200
+Wire Wire Line
+	10100 1200 10500 1200
+Wire Wire Line
+	10100 1250 10100 1200
+Connection ~ 10100 1200
+Wire Wire Line
+	10100 900  10100 950 
+Wire Wire Line
+	10100 1450 10100 1500
+$Comp
+L power:GND #PWR011
+U 1 1 5FDEBB2B
+P 10950 1200
+F 0 "#PWR011" H 10950 950 50  0001 C CNN
+F 1 "GND" H 10955 1027 50  0000 C CNN
+F 2 "" H 10950 1200 50  0001 C CNN
+F 3 "" H 10950 1200 50  0001 C CNN
+	1    10950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5FDEBD31
+P 10100 1500
+F 0 "#PWR07" H 10100 1250 50  0001 C CNN
+F 1 "GND" H 10105 1327 50  0000 C CNN
+F 2 "" H 10100 1500 50  0001 C CNN
+F 3 "" H 10100 1500 50  0001 C CNN
+	1    10100 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5FE0D77E
+P 10700 2250
+F 0 "SW2" H 10700 2535 50  0000 C CNN
+F 1 "BTN2" H 10700 2444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 10700 2450 50  0001 C CNN
+F 3 "~" H 10700 2450 50  0001 C CNN
+F 4 "C285463" H 10700 2250 50  0001 C CNN "LCSC"
+F 5 "PTS645SH43SMTR92LFS" H 10700 2250 50  0001 C CNN "MFG P/N"
+	1    10700 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 2250 10900 2250
+$Comp
+L Device:R_Small R6
+U 1 1 5FE0D786
+P 10100 2100
+F 0 "R6" H 10159 2146 50  0000 L CNN
+F 1 "100k" H 10159 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 2100 50  0001 C CNN
+F 3 "~" H 10100 2100 50  0001 C CNN
+F 4 "C100048" H 10100 2100 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-07100KL" H 10100 2100 50  0001 C CNN "MFG P/N"
+	1    10100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5FE0D78C
+P 10100 2400
+F 0 "C2" H 10192 2446 50  0000 L CNN
+F 1 "0.1uF" H 10192 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 2400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Huaxin-S-T-0603F104Z500_C83060.pdf" H 10100 2400 50  0001 C CNN
+F 4 "C83060" H 10100 2400 50  0001 C CNN "LCSC"
+F 5 "063F104Z500CT" H 10100 2400 50  0001 C CNN "MFG P/N"
+	1    10100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2200 10100 2250
+Wire Wire Line
+	10100 2250 10500 2250
+Wire Wire Line
+	10100 2300 10100 2250
+Connection ~ 10100 2250
+Wire Wire Line
+	10100 1950 10100 2000
+Wire Wire Line
+	10100 2500 10100 2550
+$Comp
+L power:GND #PWR012
+U 1 1 5FE0D798
+P 10950 2250
+F 0 "#PWR012" H 10950 2000 50  0001 C CNN
+F 1 "GND" H 10955 2077 50  0000 C CNN
+F 2 "" H 10950 2250 50  0001 C CNN
+F 3 "" H 10950 2250 50  0001 C CNN
+	1    10950 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5FE0D79E
+P 10100 2550
+F 0 "#PWR08" H 10100 2300 50  0001 C CNN
+F 1 "GND" H 10105 2377 50  0000 C CNN
+F 2 "" H 10100 2550 50  0001 C CNN
+F 3 "" H 10100 2550 50  0001 C CNN
+	1    10100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 5FE0FC92
+P 10700 3250
+F 0 "SW3" H 10700 3535 50  0000 C CNN
+F 1 "BTN3" H 10700 3444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 10700 3450 50  0001 C CNN
+F 3 "~" H 10700 3450 50  0001 C CNN
+F 4 "C285463" H 10700 3250 50  0001 C CNN "LCSC"
+F 5 "PTS645SH43SMTR92LFS" H 10700 3250 50  0001 C CNN "MFG P/N"
+	1    10700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 3250 10900 3250
+$Comp
+L Device:R_Small R7
+U 1 1 5FE0FC9A
+P 10100 3100
+F 0 "R7" H 10159 3146 50  0000 L CNN
+F 1 "100k" H 10159 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 3100 50  0001 C CNN
+F 3 "~" H 10100 3100 50  0001 C CNN
+F 4 "C100048" H 10100 3100 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-07100KL" H 10100 3100 50  0001 C CNN "MFG P/N"
+	1    10100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5FE0FCA0
+P 10100 3400
+F 0 "C3" H 10192 3446 50  0000 L CNN
+F 1 "0.1uF" H 10192 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 3400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Huaxin-S-T-0603F104Z500_C83060.pdf" H 10100 3400 50  0001 C CNN
+F 4 "C83060" H 10100 3400 50  0001 C CNN "LCSC"
+F 5 "063F104Z500CT" H 10100 3400 50  0001 C CNN "MFG P/N"
+	1    10100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 3200 10100 3250
+Wire Wire Line
+	10100 3250 10500 3250
+Wire Wire Line
+	10100 3300 10100 3250
+Connection ~ 10100 3250
+Wire Wire Line
+	10100 2950 10100 3000
+Wire Wire Line
+	10100 3500 10100 3550
+$Comp
+L power:GND #PWR013
+U 1 1 5FE0FCAC
+P 10950 3250
+F 0 "#PWR013" H 10950 3000 50  0001 C CNN
+F 1 "GND" H 10955 3077 50  0000 C CNN
+F 2 "" H 10950 3250 50  0001 C CNN
+F 3 "" H 10950 3250 50  0001 C CNN
+	1    10950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5FE0FCB2
+P 10100 3550
+F 0 "#PWR09" H 10100 3300 50  0001 C CNN
+F 1 "GND" H 10105 3377 50  0000 C CNN
+F 2 "" H 10100 3550 50  0001 C CNN
+F 3 "" H 10100 3550 50  0001 C CNN
+	1    10100 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 5FE1ABBF
+P 10700 4250
+F 0 "SW4" H 10700 4535 50  0000 C CNN
+F 1 "BTN4" H 10700 4444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 10700 4450 50  0001 C CNN
+F 3 "~" H 10700 4450 50  0001 C CNN
+F 4 "C285463" H 10700 4250 50  0001 C CNN "LCSC"
+F 5 "PTS645SH43SMTR92LFS" H 10700 4250 50  0001 C CNN "MFG P/N"
+	1    10700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 4250 10900 4250
+$Comp
+L Device:R_Small R8
+U 1 1 5FE1ABC7
+P 10100 4100
+F 0 "R8" H 10159 4146 50  0000 L CNN
+F 1 "100k" H 10159 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 4100 50  0001 C CNN
+F 3 "~" H 10100 4100 50  0001 C CNN
+F 4 "C100048" H 10100 4100 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-07100KL" H 10100 4100 50  0001 C CNN "MFG P/N"
+	1    10100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5FE1ABCD
+P 10100 4400
+F 0 "C4" H 10192 4446 50  0000 L CNN
+F 1 "0.1uF" H 10192 4355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 4400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Huaxin-S-T-0603F104Z500_C83060.pdf" H 10100 4400 50  0001 C CNN
+F 4 "C83060" H 10100 4400 50  0001 C CNN "LCSC"
+F 5 "063F104Z500CT" H 10100 4400 50  0001 C CNN "MFG P/N"
+	1    10100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4200 10100 4250
+Wire Wire Line
+	10100 4250 10500 4250
+Wire Wire Line
+	10100 4300 10100 4250
+Connection ~ 10100 4250
+Wire Wire Line
+	10100 3950 10100 4000
+Wire Wire Line
+	10100 4500 10100 4550
+$Comp
+L power:GND #PWR014
+U 1 1 5FE1ABD9
+P 10950 4250
+F 0 "#PWR014" H 10950 4000 50  0001 C CNN
+F 1 "GND" H 10955 4077 50  0000 C CNN
+F 2 "" H 10950 4250 50  0001 C CNN
+F 3 "" H 10950 4250 50  0001 C CNN
+	1    10950 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5FE1ABDF
+P 10100 4550
+F 0 "#PWR010" H 10100 4300 50  0001 C CNN
+F 1 "GND" H 10105 4377 50  0000 C CNN
+F 2 "" H 10100 4550 50  0001 C CNN
+F 3 "" H 10100 4550 50  0001 C CNN
+	1    10100 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5FE225EC
+P 8800 1800
+F 0 "D2" H 8793 1545 50  0000 C CNN
+F 1 "LED2" H 8793 1636 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8800 1800 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1810231814_Lite-On-LTST-C190KFKT_C157740.pdf" H 8800 1800 50  0001 C CNN
+F 4 "LTST-C190KFKT" H 8800 1800 50  0001 C CNN "MFG P/N"
+F 5 "C157740" H 8800 1800 50  0001 C CNN "LCSC"
+	1    8800 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5FE225F2
+P 8500 1800
+F 0 "R2" V 8304 1800 50  0000 C CNN
+F 1 "1k" V 8395 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8500 1800 50  0001 C CNN
+F 3 "~" H 8500 1800 50  0001 C CNN
+F 4 "C14676" H 8500 1800 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-071KL" H 8500 1800 50  0001 C CNN "MFG P/N"
+	1    8500 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FE225F8
+P 9000 1800
+F 0 "#PWR04" H 9000 1550 50  0001 C CNN
+F 1 "GND" H 9005 1627 50  0000 C CNN
+F 2 "" H 9000 1800 50  0001 C CNN
+F 3 "" H 9000 1800 50  0001 C CNN
+	1    9000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1800 8950 1800
+Wire Wire Line
+	8650 1800 8600 1800
+$Comp
+L Device:LED D3
+U 1 1 5FE2522F
+P 8800 2400
+F 0 "D3" H 8793 2145 50  0000 C CNN
+F 1 "LED3" H 8793 2236 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8800 2400 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1810231814_Lite-On-LTST-C190KFKT_C157740.pdf" H 8800 2400 50  0001 C CNN
+F 4 "LTST-C190KFKT" H 8800 2400 50  0001 C CNN "MFG P/N"
+F 5 "C157740" H 8800 2400 50  0001 C CNN "LCSC"
+	1    8800 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5FE25235
+P 8500 2400
+F 0 "R3" V 8304 2400 50  0000 C CNN
+F 1 "1k" V 8395 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8500 2400 50  0001 C CNN
+F 3 "~" H 8500 2400 50  0001 C CNN
+F 4 "C14676" H 8500 2400 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-071KL" H 8500 2400 50  0001 C CNN "MFG P/N"
+	1    8500 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FE2523B
+P 9000 2400
+F 0 "#PWR05" H 9000 2150 50  0001 C CNN
+F 1 "GND" H 9005 2227 50  0000 C CNN
+F 2 "" H 9000 2400 50  0001 C CNN
+F 3 "" H 9000 2400 50  0001 C CNN
+	1    9000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2400 8950 2400
+Wire Wire Line
+	8650 2400 8600 2400
+$Comp
+L Device:LED D4
+U 1 1 5FE27BBA
+P 8800 3000
+F 0 "D4" H 8793 2745 50  0000 C CNN
+F 1 "LED4" H 8793 2836 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8800 3000 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1810231814_Lite-On-LTST-C190KFKT_C157740.pdf" H 8800 3000 50  0001 C CNN
+F 4 "LTST-C190KFKT" H 8800 3000 50  0001 C CNN "MFG P/N"
+F 5 "C157740" H 8800 3000 50  0001 C CNN "LCSC"
+	1    8800 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5FE27BC0
+P 8500 3000
+F 0 "R4" V 8304 3000 50  0000 C CNN
+F 1 "1k" V 8395 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8500 3000 50  0001 C CNN
+F 3 "~" H 8500 3000 50  0001 C CNN
+F 4 "C14676" H 8500 3000 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-071KL" H 8500 3000 50  0001 C CNN "MFG P/N"
+	1    8500 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5FE27BC6
+P 9000 3000
+F 0 "#PWR06" H 9000 2750 50  0001 C CNN
+F 1 "GND" H 9005 2827 50  0000 C CNN
+F 2 "" H 9000 3000 50  0001 C CNN
+F 3 "" H 9000 3000 50  0001 C CNN
+	1    9000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3000 8950 3000
+Wire Wire Line
+	8650 3000 8600 3000
+Wire Wire Line
+	8350 1200 8400 1200
+Wire Wire Line
+	8350 1800 8400 1800
+Wire Wire Line
+	8350 2400 8400 2400
+Wire Wire Line
+	8350 3000 8400 3000
+Text GLabel 9600 2250 0    50   Input ~ 0
+gpio_16
+Text GLabel 9600 1200 0    50   Input ~ 0
+gpio_15
+Text GLabel 9600 3250 0    50   Input ~ 0
+gpio_14
+Text GLabel 9600 4250 0    50   Input ~ 0
+gpio_0
+Text GLabel 7900 1200 0    50   Input ~ 0
+gpio_18
+Text GLabel 7900 2400 0    50   Input ~ 0
+gpio_19
+Text GLabel 7900 1800 0    50   Input ~ 0
+gpio_17
+Text GLabel 7900 3000 0    50   Input ~ 0
+gpio_20
+Text GLabel 4400 650  0    50   Input ~ 0
+VDD
+Text GLabel 5450 900  2    50   Input ~ 0
+VBUS
+Text GLabel 3350 2200 0    50   Input ~ 0
+D+
+Text GLabel 3350 2300 0    50   Input ~ 0
+D-
+Text GLabel 3350 2800 0    50   Input ~ 0
+VBAT
+Text GLabel 3350 3000 0    50   Input ~ 0
+SWDCLK
+Text GLabel 3350 3100 0    50   Input ~ 0
+SWDIO
+Text GLabel 3350 3300 0    50   Input ~ 0
+nRESET
+Text GLabel 7900 4250 0    50   Input ~ 0
+VDD
+Text GLabel 7900 4350 0    50   Input ~ 0
+nRESET
+Text GLabel 8500 4250 2    50   Input ~ 0
+SWDIO
+Text GLabel 8500 4350 2    50   Input ~ 0
+SWDCLK
+Text GLabel 8500 4450 2    50   Input ~ 0
+gpio_8_SWO
+Text GLabel 10100 900  2    50   Input ~ 0
+VDD
+Text GLabel 10100 1950 2    50   Input ~ 0
+VDD
+Text GLabel 10100 2950 2    50   Input ~ 0
+VDD
+Text GLabel 10100 3950 2    50   Input ~ 0
+VDD
+$Comp
+L Switch:SW_Push SW5
+U 1 1 5FE115E3
+P 10700 5400
+F 0 "SW5" H 10700 5685 50  0000 C CNN
+F 1 "RESET" H 10700 5594 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 10700 5600 50  0001 C CNN
+F 3 "~" H 10700 5600 50  0001 C CNN
+F 4 "C285463" H 10700 5400 50  0001 C CNN "LCSC"
+F 5 "PTS645SH43SMTR92LFS" H 10700 5400 50  0001 C CNN "MFG P/N"
+	1    10700 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 5400 10900 5400
+$Comp
+L Device:R_Small R11
+U 1 1 5FE115EA
+P 10100 5250
+F 0 "R11" H 10159 5296 50  0000 L CNN
+F 1 "100k" H 10159 5205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 5250 50  0001 C CNN
+F 3 "~" H 10100 5250 50  0001 C CNN
+F 4 "C100048" H 10100 5250 50  0001 C CNN "LCSC"
+F 5 "RC0603JR-07100KL" H 10100 5250 50  0001 C CNN "MFG P/N"
+	1    10100 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5FE115F0
+P 10100 5550
+F 0 "C5" H 10192 5596 50  0000 L CNN
+F 1 "0.1uF" H 10192 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 5550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Huaxin-S-T-0603F104Z500_C83060.pdf" H 10100 5550 50  0001 C CNN
+F 4 "C83060" H 10100 5550 50  0001 C CNN "LCSC"
+F 5 "063F104Z500CT" H 10100 5550 50  0001 C CNN "MFG P/N"
+	1    10100 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5350 10100 5400
+Wire Wire Line
+	10100 5400 10500 5400
+Wire Wire Line
+	10100 5450 10100 5400
+Connection ~ 10100 5400
+Wire Wire Line
+	10100 5100 10100 5150
+Wire Wire Line
+	10100 5650 10100 5700
+$Comp
+L power:GND #PWR019
+U 1 1 5FE115FC
+P 10950 5400
+F 0 "#PWR019" H 10950 5150 50  0001 C CNN
+F 1 "GND" H 10955 5227 50  0000 C CNN
+F 2 "" H 10950 5400 50  0001 C CNN
+F 3 "" H 10950 5400 50  0001 C CNN
+	1    10950 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5FE11602
+P 10100 5700
+F 0 "#PWR018" H 10100 5450 50  0001 C CNN
+F 1 "GND" H 10105 5527 50  0000 C CNN
+F 2 "" H 10100 5700 50  0001 C CNN
+F 3 "" H 10100 5700 50  0001 C CNN
+	1    10100 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5400 10050 5400
+Text GLabel 10100 5100 2    50   Input ~ 0
+VDD
+Text Notes 9200 5000 0    50   ~ 0
+Reset
+Text GLabel 10050 5400 0    50   Input ~ 0
+nRESET
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5FF26D9F
+P 8000 5250
+F 0 "H2" H 8100 5296 50  0000 L CNN
+F 1 "MountingHole" H 8100 5205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 8000 5250 50  0001 C CNN
+F 3 "" H 8000 5250 50  0001 C CNN
+F 4 "DNP" H 8000 5250 50  0001 C CNN "DNP"
+	1    8000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5FF299B5
+P 8000 5450
+F 0 "H3" H 8100 5496 50  0000 L CNN
+F 1 "MountingHole" H 8100 5405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 8000 5450 50  0001 C CNN
+F 3 "" H 8000 5450 50  0001 C CNN
+F 4 "DNP" H 8000 5450 50  0001 C CNN "DNP"
+	1    8000 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5FF2C546
+P 8000 5650
+F 0 "H4" H 8100 5696 50  0000 L CNN
+F 1 "MountingHole" H 8100 5605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 8000 5650 50  0001 C CNN
+F 3 "" H 8000 5650 50  0001 C CNN
+F 4 "DNP" H 8000 5650 50  0001 C CNN "DNP"
+	1    8000 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5FF2F0C3
+P 8000 5850
+F 0 "H5" H 8100 5896 50  0000 L CNN
+F 1 "MountingHole" H 8100 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 8000 5850 50  0001 C CNN
+F 3 "" H 8000 5850 50  0001 C CNN
+F 4 "DNP" H 8000 5850 50  0001 C CNN "DNP"
+	1    8000 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP6
+U 1 1 5FF51D6F
+P 8200 1200
+F 0 "JP6" H 8200 1405 50  0000 C CNN
+F 1 "SB" H 8200 1314 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8200 1200 50  0001 C CNN
+F 3 "~" H 8200 1200 50  0001 C CNN
+F 4 "DNP" H 8200 1200 50  0001 C CNN "DNP"
+	1    8200 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP7
+U 1 1 5FF550A5
+P 8200 1800
+F 0 "JP7" H 8200 2005 50  0000 C CNN
+F 1 "SB" H 8200 1914 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8200 1800 50  0001 C CNN
+F 3 "~" H 8200 1800 50  0001 C CNN
+F 4 "DNP" H 8200 1800 50  0001 C CNN "DNP"
+	1    8200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP8
+U 1 1 5FF557DE
+P 8200 2400
+F 0 "JP8" H 8200 2605 50  0000 C CNN
+F 1 "SB" H 8200 2514 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8200 2400 50  0001 C CNN
+F 3 "~" H 8200 2400 50  0001 C CNN
+F 4 "DNP" H 8200 2400 50  0001 C CNN "DNP"
+	1    8200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP9
+U 1 1 5FF57209
+P 8200 3000
+F 0 "JP9" H 8200 3205 50  0000 C CNN
+F 1 "SB" H 8200 3114 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8200 3000 50  0001 C CNN
+F 3 "~" H 8200 3000 50  0001 C CNN
+F 4 "DNP" H 8200 3000 50  0001 C CNN "DNP"
+	1    8200 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2400 8050 2400
+Wire Wire Line
+	7900 3000 8050 3000
+Wire Wire Line
+	7900 1200 8050 1200
+Wire Wire Line
+	7900 1800 8050 1800
+$Comp
+L Jumper:SolderJumper_2_Bridged JP10
+U 1 1 5FFCB211
+P 9850 1200
+F 0 "JP10" H 9850 1405 50  0000 C CNN
+F 1 "SB" H 9850 1314 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9850 1200 50  0001 C CNN
+F 3 "~" H 9850 1200 50  0001 C CNN
+F 4 "DNP" H 9850 1200 50  0001 C CNN "DNP"
+	1    9850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP11
+U 1 1 5FFCB217
+P 9850 2250
+F 0 "JP11" H 9850 2455 50  0000 C CNN
+F 1 "SB" H 9850 2364 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9850 2250 50  0001 C CNN
+F 3 "~" H 9850 2250 50  0001 C CNN
+F 4 "DNP" H 9850 2250 50  0001 C CNN "DNP"
+	1    9850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP12
+U 1 1 5FFCB21D
+P 9850 3250
+F 0 "JP12" H 9850 3455 50  0000 C CNN
+F 1 "SB" H 9850 3364 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9850 3250 50  0001 C CNN
+F 3 "~" H 9850 3250 50  0001 C CNN
+F 4 "DNP" H 9850 3250 50  0001 C CNN "DNP"
+	1    9850 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP13
+U 1 1 5FFCB223
+P 9850 4250
+F 0 "JP13" H 9850 4455 50  0000 C CNN
+F 1 "SB" H 9850 4364 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9850 4250 50  0001 C CNN
+F 3 "~" H 9850 4250 50  0001 C CNN
+F 4 "DNP" H 9850 4250 50  0001 C CNN "DNP"
+	1    9850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1200 10100 1200
+Wire Wire Line
+	9700 1200 9600 1200
+Wire Wire Line
+	10000 2250 10100 2250
+Wire Wire Line
+	9700 2250 9600 2250
+Wire Wire Line
+	10000 3250 10100 3250
+Wire Wire Line
+	9700 3250 9600 3250
+Wire Wire Line
+	10000 4250 10100 4250
+Wire Wire Line
+	9700 4250 9600 4250
+Wire Notes Line
+	7450 3850 9150 3850
+Wire Notes Line
+	1750 4850 1750 500 
+Wire Notes Line
+	1750 500  11200 500 
+Wire Notes Line
+	1750 4850 11200 4850
+Wire Notes Line
+	7450 500  7450 6000
+Wire Notes Line
+	9150 6500 11200 6500
+Wire Notes Line
+	9150 500  9150 6500
+Wire Notes Line
+	11200 500  11200 6500
+Text Notes 7550 5000 0    50   ~ 0
+Mountingholes
+Text Notes 9200 6100 0    50   ~ 0
+M.2 Mountinghole
+Text Notes 7500 4000 0    50   ~ 0
+Tag Connect
+Text Notes 1850 650  0    50   ~ 0
+M.2 Connector
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 60090C04
+P 6850 5300
+F 0 "FID1" H 6935 5346 50  0000 L CNN
+F 1 "Fiducial" H 6935 5255 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 6850 5300 50  0001 C CNN
+F 3 "~" H 6850 5300 50  0001 C CNN
+	1    6850 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 6650 5000 0    50   ~ 0
+Fiducials
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 6009F496
+P 6850 5550
+F 0 "FID2" H 6935 5596 50  0000 L CNN
+F 1 "Fiducial" H 6935 5505 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 6850 5550 50  0001 C CNN
+F 3 "~" H 6850 5550 50  0001 C CNN
+	1    6850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 6009F858
+P 6850 5800
+F 0 "FID3" H 6935 5846 50  0000 L CNN
+F 1 "Fiducial" H 6935 5755 50  0000 L CNN
+F 2 "Fiducial:Fiducial_1mm_Mask2mm" H 6850 5800 50  0001 C CNN
+F 3 "~" H 6850 5800 50  0001 C CNN
+	1    6850 5800
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6600 4850 6600 6000
+Wire Notes Line
+	6600 6000 11200 6000
+$EndSCHEMATC
